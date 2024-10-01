@@ -1,0 +1,229 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.navbar {
+    transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Experience and Skills Cards */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Contact Form Styling */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form .form-control {
+    margin-bottom: 15px;
+}
+
+#contact button {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Footer Icon Hover Effects */
+footer a:hover {
+    color: #007bff;
+}
+
+/* Tooltip Styling */
+[data-toggle="tooltip"] {
+    cursor: pointer;
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #212529;
+}
+
+/* Custom Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Update dark mode styles for better visibility */
+body.dark-mode {
+    background-color: #121212;  /* Dark background */
+    color: #e0e0e0;  /* Light grey text for readability */
+}
+
+.navbar.dark-mode {
+    background-color: #1f1f1f !important;  /* Darker navbar */
+}
+
+footer.dark-mode {
+    background-color: #1f1f1f;  /* Darker footer */
+}
+
+.card.dark-mode {
+    background-color: #1e1e1e;  /* Darker background for cards */
+    color: #e0e0e0;  /* Light text for better contrast */
+}
+
+/* Ensure buttons and links are visible in dark mode */
+a.dark-mode, a:hover.dark-mode {
+    color: #007bff;  /* Bright link color */
+}
+
+button.dark-mode, .btn.dark-mode {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Ensure headings and text in cards are bright enough */
+h5.dark-mode, p.dark-mode, ul.dark-mode {
+    color: #ffffff;
+}
+
+
+/* AOS Styling */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: none;
+}
+/* Timeline Layout */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.timeline-title i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.timeline-item p {
+    margin: 5px 0;
+}
+
+.timeline-item:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Timeline Layout */
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .timeline-title {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* Adjust the size of the profile photo */
+.profile-photo {
+    width: 350px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the photo circular */
+    margin-bottom: 20px;
+}
+
+
+
+/* Adjust the size of the logos while keeping the 'card-img-top' class */
+.resized-logo {
+    width: 170px;  /* Adjust width for smaller logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the logo horizontally */
+}

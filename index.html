@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aman Gupta - Machine Learning Graduate</title>
+    <!-- Professional Font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- AOS for Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Custom CSS for Theme -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Header Section with Sticky Navbar -->
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+    >
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#home">Aman Gupta</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse smooth-scroll" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <!-- Light/Dark Mode Toggle Button -->
+                <button id="theme-toggle" class="btn btn-outline-light ml-2">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home" class="hero bg-dark text-white d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-4 font-weight-bold">Aman Gupta</h1>
+            <p class="lead">Machine Learning Graduate</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:agupta47@stevens.edu">agupta47@stevens.edu</a></p>
+                <p>Phone: +1 551-359-4631 | Location: Hoboken, NJ</p>
+            </div>
+            <a href="#about" class="btn btn-primary btn-lg mt-4">Learn More About Me</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-4">About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/IMG_0316.jpg" class="profile-photo" alt="Aman Gupta">
+                </div>
+                <div class="col-md-6">
+                    <p>
+                      I'm a Machine Learning enthusiast with a deep passion for artificial intelligence,
+                      currently pursuing my Master's degree at Stevens Institute of Technology.
+                    </p>
+                    <p>
+                      My expertise spans across AI, NLP, and data science, with a strong focus on
+                      Python and ML frameworks. I'm dedicated to applying ML to solve real-world problems.
+                    </p>
+                    <a href="#projects" class="btn btn-outline-primary mt-3">View My Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-4">Projects</h2>
+            <div class="row">
+                <!-- Project 1: LangChain Web Scraping -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img
+                          src="images\langchain.webp"
+                          class="card-img-top"
+                          alt="LangChain Web Scraping"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">LangChain-Driven Web Scraping with OpenAI</h5>
+                            <p class="card-text">
+                                Web scraping project utilizing LangChain and OpenAI for data extraction and analysis.
+                            </p>
+                            <a
+                              href="https://github.com/amangupta05/LangChainDriven-Web-Scraping-with-OpenAI"
+                              class="btn btn-primary btn-block"
+                              target="_blank"
+                            >
+                              View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project 2: Text Summarizer -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img
+                          src="images/text.png"
+                          class="card-img-top"
+                          alt="Text Summarizer"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Text Summarizer (BERT and T5 Models)</h5>
+                            <p class="card-text">
+                                Using BERT and T5 transformers for abstractive text summarization on large datasets.
+                            </p>
+                            <a
+                              href="https://github.com/amangupta05/Text-Summarizer"
+                              class="btn btn-primary btn-block"
+                              target="_blank"
+                            >
+                              View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project 3: Q&A using RoBERTa and GPT-4 API -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img
+                          src="images/Q and A.webp"
+                          class="card-img-top"
+                          alt="Q&A System"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Q&A using RoBERTa and GPT-4 API</h5>
+                            <p class="card-text">
+                                A question-answering system built using RoBERTa and the GPT-4 API.
+                            </p>
+                            <a
+                              href="https://github.com/amangupta05/Q-A-using-roberta-and-GPT-4-Api"
+                              class="btn btn-primary btn-block"
+                              target="_blank"
+                            >
+                              View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project 4: MMVAE on MNIST and SVHN -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img
+                          src="images/mmvae_mnist_svhn.webp"
+                          class="card-img-top"
+                          alt="MMVAE MNIST SVHN"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">MMVAE for MNIST and SVHN Dataset</h5>
+                            <p class="card-text">
+                                Trained a Multi-Modal Variational Autoencoder on MNIST and SVHN datasets.
+                            </p>
+                            <a
+                              href="https://github.com/amangupta05/MNIST-SVHN/blob/main/MMVAE/src/models/mmvae_mnist_svhn.py"
+                              class="btn btn-primary btn-block"
+                              target="_blank"
+                            >
+                              View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project 5: Stock Price Prediction -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img
+                          src="images/stock_price_prediction.webp"
+                          class="card-img-top"
+                          alt="Stock Price Prediction"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Stock Price Prediction</h5>
+                            <p class="card-text">
+                                Predicting stock prices using Decision Trees, SVM, Naïve Bayes, and LSTM models.
+                            </p>
+                            <a
+                              href="https://github.com/amangupta05/stock-price-prediticion"
+                              class="btn btn-primary btn-block"
+                              target="_blank"
+                            >
+                              View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal for LangChain Web Scraping Project -->
+    <div class="modal fade" id="projectModalLangChain" tabindex="-1" role="dialog" aria-labelledby="projectModalLabelLangChain" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabelLangChain">LangChain-Driven Web Scraping with OpenAI</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This project demonstrates how LangChain is used alongside OpenAI models to scrape and analyze web data effectively. 
+                        The pipeline integrates web scraping techniques and language models to process large datasets extracted from the web.
+                    </p>
+                    <p>Tools: Python, OpenAI API, LangChain, BeautifulSoup</p>
+                    <a href="https://github.com/amangupta05/LangChainDriven-Web-Scraping-with-OpenAI" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Text Summarizer Project -->
+    <div class="modal fade" id="projectModalTextSummarizer" tabindex="-1" role="dialog" aria-labelledby="projectModalLabelTextSummarizer" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabelTextSummarizer">Text Summarizer using BERT and T5 Models</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        In this project, I developed a text summarization system utilizing BERT for extractive summarization and T5 for abstractive summarization. 
+                        The model processes large text datasets and generates concise summaries while maintaining coherence and relevance.
+                    </p>
+                    <p>Tools: Python, Hugging Face Transformers, BERT, T5, PyTorch</p>
+                    <a href="https://github.com/amangupta05/Text-Summarizer" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Q&A using RoBERTa and GPT-4 API -->
+    <div class="modal fade" id="projectModalQA" tabindex="-1" role="dialog" aria-labelledby="projectModalLabelQA" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabelQA">Q&A using RoBERTa and GPT-4 API</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This project focuses on building a Q&A system using RoBERTa for context understanding and GPT-4 for generating highly accurate responses. 
+                        The system is capable of answering complex questions with a high degree of accuracy.
+                    </p>
+                    <p>Tools: Python, Hugging Face Transformers, RoBERTa, GPT-4 API</p>
+                    <a href="https://github.com/amangupta05/Q-A-using-roberta-and-GPT-4-Api" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for MMVAE on MNIST and SVHN -->
+    <div class="modal fade" id="projectModalMMVAE" tabindex="-1" role="dialog" aria-labelledby="projectModalLabelMMVAE" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabelMMVAE">MMVAE for MNIST and SVHN Dataset</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This project involves training a Multi-Modal Variational Autoencoder (MMVAE) on the MNIST and SVHN datasets to generate joint and cross-modal samples. 
+                        The model leverages variational inference to generate coherent results from both image datasets.
+                    </p>
+                    <p>Tools: Python, PyTorch, Variational Autoencoders, MNIST, SVHN</p>
+                    <a href="https://github.com/amangupta05/MNIST-SVHN/blob/main/MMVAE/src/models/mmvae_mnist_svhn.py" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Stock Price Prediction -->
+    <div class="modal fade" id="projectModalStock" tabindex="-1" role="dialog" aria-labelledby="projectModalLabelStock" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabelStock">Stock Price Prediction</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This project applies multiple machine learning models including Decision Trees, Support Vector Machines (SVM), Naïve Bayes, and LSTM to predict stock prices based on historical data. 
+                        The models are evaluated using accuracy, precision, recall, and other performance metrics.
+                    </p>
+                    <p>Tools: Python, scikit-learn, TensorFlow, LSTM</p>
+                    <a href="https://github.com/amangupta05/stock-price-prediticion" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="experience" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-4">Experience</h2>
+            <div class="row">
+                <!-- Experience Card: Summer AI Fellow -->
+                <div class="col-md-6">
+                    <div class="card experience-card">
+                        <img src="images/stevens_logo.png" class="card-img-top resized-logo" alt="Stevens Institute of Technology Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Summer AI Fellow</h5>
+                            <p class="card-text"><strong>Stevens Institute of Technology</strong> (June 2024 – Sep 2024)</p>
+                            <ul>
+                                <li>Focused on multimodal unsupervised learning using VAEs.</li>
+                                <li>Enhanced image quality and coherence in generated images.</li>
+                                <li>Collaborated with a research team to refine VAE architectures.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Experience Card: NLP Research Assistant -->
+                <div class="col-md-6">
+                    <div class="card experience-card">
+                        <img src="images/stevens_logo.png" class="card-img-top resized-logo" alt="Stevens Institute of Technology Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">NLP Research Assistant</h5>
+                            <p class="card-text"><strong>Stevens Institute of Technology</strong> (May 2023 – Dec 2023)</p>
+                            <ul>
+                                <li>Led development of an advanced conversational AI.</li>
+                                <li>Implemented a T5 transformer-based text summarization model.</li>
+                                <li>Demonstrated transformative impact in NLP through summarization techniques.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Experience Card: Machine Learning Intern -->
+                <div class="col-md-6">
+                    <div class="card experience-card">
+                        <img src="images/appworx_logo.png" class="card-img-top resized-logo" alt="Appworx IT Solutions Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Intern</h5>
+                            <p class="card-text"><strong>Appworx IT Solutions Pvt Ltd</strong> (Aug 2021 – Feb 2022)</p>
+                            <ul>
+                                <li>Designed a machine learning model to classify images.</li>
+                                <li>Achieved 95% accuracy using CNNs for image data analysis.</li>
+                                <li>Automated image verification, reducing manual review by 70%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Experience Card: Teaching Assistant -->
+                <div class="col-md-6">
+                    <div class="card experience-card">
+                        <img src="images/stevens_logo.png" class="card-img-top resized-logo" alt="Stevens Institute of Technology Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Teaching Assistant for Machine Learning</h5>
+                            <p class="card-text"><strong>Stevens Institute of Technology</strong> (Sep 2024 – Present)</p>
+                            <ul>
+                                <li>Assisted in teaching machine learning fundamentals and applications.</li>
+                                <li>Guided students through ML model implementations and concepts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-4">Skills</h2>
+            <div class="row">
+                <!-- Machine Learning Skills -->
+                <div class="col-md-6">
+                    <div class="card skills-card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-brain"></i> Machine Learning</h5>
+                            <ul>
+                                <li>Proficient in Python and R for machine learning.</li>
+                                <li>Experience with scikit-learn, TensorFlow, Keras, and PyTorch.</li>
+                                <li>Familiar with RNNs, LSTMs, CNNs, and Transformer models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- NLP Skills -->
+                <div class="col-md-6">
+                    <div class="card skills-card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-language"></i> Natural Language Processing (NLP)</h5>
+                            <ul>
+                                <li>Expertise in text processing and sentiment analysis.</li>
+                                <li>Proficient in using Hugging Face Transformers, SpaCy, and NLTK.</li>
+                                <li>Experience with building and fine-tuning language models like BERT and GPT.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Computer Vision Skills -->
+                <div class="col-md-6">
+                    <div class="card skills-card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-camera"></i> Computer Vision</h5>
+                            <ul>
+                                <li>Skilled in image processing and object detection.</li>
+                                <li>Experience with OpenCV, YOLO, and image classification using CNNs.</li>
+                                <li>Worked on projects involving image segmentation and generative models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Data Analysis Skills -->
+                <div class="col-md-6">
+                    <div class="card skills-card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-chart-bar"></i> Data Analysis</h5>
+                            <ul>
+                                <li>Strong analytical skills with proficiency in SQL.</li>
+                                <li>Experience with data visualization tools like Matplotlib, Seaborn, and Tableau.</li>
+                                <li>Proficient in data wrangling and exploratory data analysis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Deployment Skills -->
+                <div class="col-md-6">
+                    <div class="card skills-card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-cloud"></i> Deployment</h5>
+                            <ul>
+                                <li>Experience with deploying machine learning models using Flask and FastAPI.</li>
+                                <li>Familiar with cloud services like AWS, GCP, and Azure for model deployment.</li>
+                                <li>Proficient in using Docker for containerization and Kubernetes for orchestration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="education" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-4">Education</h2>
+            <div class="timeline">
+                <!-- Master's Degree -->
+                <div class="timeline-item">
+                    <h5 class="timeline-title"><i class="fas fa-graduation-cap"></i> Master of Science in Machine Learning</h5>
+                    <p><strong>Stevens Institute of Technology</strong></p>
+                    <p>Graduation: December 2024</p>
+                    <p>GPA: 3.8/4.0</p>
+                    <p><strong>Relevant Courses:</strong> Machine Learning Fundamentals, Deep Learning, NLP, Big Data Technology, Data Mining</p>
+                    <p><strong>Honors:</strong> Graduate Scholarship of $8000</p>
+                </div>
+    
+                <!-- Bachelor's Degree -->
+                <div class="timeline-item">
+                    <h5 class="timeline-title"><i class="fas fa-graduation-cap"></i> Bachelor of Technology in Computer Science</h5>
+                    <p><strong>University Institute of Engineering and Technology</strong></p>
+                    <p>Graduation: May 2022</p>
+                    <p><strong>Relevant Courses:</strong> Data Structures, Algorithms, Operating Systems, Database Management Systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-4">Contact Me</h2>
+            <div class="text-center">
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:agupta47@stevens.edu">agupta47@stevens.edu</a></p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +1 551-359-4631</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Hoboken, NJ</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Other sections (Experience, Skills, Education, Contact) -->
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Aman Gupta. All rights reserved.</p>
+            <div>
+                <a href="https://www.linkedin.com/in/aman-gupta5/" class="text-white mx-2" data-toggle="tooltip" title="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/amangupta05" class="text-white mx-2" data-toggle="tooltip" title="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
