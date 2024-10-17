@@ -215,6 +215,14 @@ h5.dark-mode, p.dark-mode, ul.dark-mode {
     border-radius: 50%; /* Optional: makes the photo circular */
     margin-bottom: 20px;
 }
+.company-logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
