@@ -1,4 +1,4 @@
-'use client'
+'use client' // Ensures it runs on the frontend
 
 import { useState, useEffect } from 'react'
 import {
@@ -27,6 +27,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return // Fix for static export
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
     }
@@ -35,9 +37,11 @@ export default function Navbar() {
   }, [])
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (typeof window !== 'undefined') {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
     if (isOpen) onToggle()
   }
@@ -61,38 +65,21 @@ export default function Navbar() {
         align="center"
         maxW="container.xl"
         mx="auto"
+        justify="space-between"
       >
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
-            variant="ghost"
-            color="white"
-            aria-label="Toggle Navigation"
-            _hover={{ bg: 'whiteAlpha.200' }}
-          />
-        </Flex>
-
+        {/* Brand Logo */}
         <Text
-          textAlign={{ base: 'center', md: 'left' }}
           fontWeight="bold"
           fontSize="xl"
-          flex={{ base: 1, md: 'none' }}
           color="brand.electricBlue"
+          cursor="pointer"
+          onClick={() => scrollToSection('home')}
         >
           AG
         </Text>
 
-        <HStack
-          flex={{ base: 'none', md: 1 }}
-          justify="center"
-          spacing={8}
-          display={{ base: 'none', md: 'flex' }}
-        >
+        {/* Desktop Navigation */}
+        <HStack spacing={8} display={{ base: 'none', md: 'flex' }}>
           {NavItems.map((item) => (
             <Button
               key={item.id}
@@ -110,8 +97,20 @@ export default function Navbar() {
             </Button>
           ))}
         </HStack>
+
+        {/* Mobile Menu Button */}
+        <IconButton
+          onClick={onToggle}
+          icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+          variant="ghost"
+          color="white"
+          aria-label="Toggle Navigation"
+          display={{ base: 'flex', md: 'none' }}
+        />
+
       </Flex>
 
+      {/* Mobile Menu */}
       <Collapse in={isOpen} animateOpacity>
         <Box bg="blackAlpha.900" p={4} display={{ md: 'none' }}>
           <VStack spacing={4}>
@@ -135,4 +134,4 @@ export default function Navbar() {
       </Collapse>
     </Box>
   )
-} 
+}
