@@ -58,7 +58,7 @@ const SkillsGlobe: React.FC = () => {
 
   return (
     <Box id="skills" width="100%" height="100vh">
-      <Heading as="h2" size="2xl" mt={10} mb={4} color="brand.neonGreen">Skills</Heading>
+      <Heading as="h2" size="2xl" mt={10} mb={12} textAlign="center" color="brand.neonGreen">Skills</Heading>
       <canvas ref={canvasRef} />
     </Box>
   );

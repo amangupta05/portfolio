@@ -164,7 +164,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return; // ✅ Prevent SSR issues
+    if (typeof window === 'undefined') return;
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -176,22 +176,13 @@ export default function Navbar() {
 
   const scrollToSection = (id: string) => {
     setTimeout(() => {
-      let element = document.getElementById(id);
-      
-      if (!element) {
-        // ✅ Try finding section with GitHub Pages base path
-        const basePathElement = document.querySelector(`[id="${id}"]`);
-        if (basePathElement) element = basePathElement as HTMLElement;
-      }
-  
+      const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        console.warn(`Section with id="${id}" not found.`);
       }
-    }, 150); // ✅ Slight delay for better scrolling
+    }, 100); // ✅ Small delay ensures scrolling works correctly
+    if (isOpen) onToggle();
   };
-  
 
   return (
     <Box
@@ -207,7 +198,7 @@ export default function Navbar() {
       py={3}
     >
       <Flex minH="60px" px={6} align="center" maxW="container.xl" mx="auto" justify="space-between">
-        {/* ✅ Logo with Home Navigation */}
+        {/* ✅ Fixed AG Logo Scrolling */}
         <Text
           fontWeight="bold"
           fontSize="2xl"
@@ -215,7 +206,7 @@ export default function Navbar() {
           cursor="pointer"
           _hover={{ color: 'brand.neonGreen', transform: 'scale(1.05)' }}
           transition="all 0.3s ease"
-          onClick={() => scrollToSection('home')}
+          onClick={() => scrollToSection('home')} // ✅ Ensures Home button works
         >
           AG
         </Text>

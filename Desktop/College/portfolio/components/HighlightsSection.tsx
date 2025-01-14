@@ -44,7 +44,7 @@ const projects = [
     title: 'AI Interactive Learning Framework',
     description: 'This project implements an interactive AI-driven framework designed to assess and guide users in learning Artificial Intelligence (AI). It leverages multiple agents for specialized tasks, including evaluating responses, generating questions, adjusting tones based on emotional states, and orchestrating the overall process. The system architecture uses Fetch.AI\'s uAgents framework to manage agent communication and integrates APIs such as Claude, Gemini, and OpenAI to deliver advanced AI functionalities. The agents collaborate to deliver a personalized and engaging learning experience.',
     tech: ['Fetch.ai', 'Claude', 'Gemini', 'OpenAI'],
-    github: 'https://github.com/amangupta05/AI-Interactive-Learning-Framework'
+    github: 'https://github.com/amangupta05/AI-Summit-New-York'
   },
   {
     title: 'IntelliRescue AI Framework',
