@@ -61,7 +61,7 @@ export default function AboutMePreview() {
           >
             <Box position="relative" w="300px" h="300px">
               <Image
-                src="Desktop/College/portfolio/public/Aman_profile.jpg"
+                src="/portfolio/Aman_profile.jpg"
                 alt="Aman Gupta"
                 fill
                 style={{ 
