@@ -41,12 +41,8 @@ export default function AboutMePreview() {
   const isMobile = useBreakpointValue({ base: true, md: false })
 
   return (
-    <Box
-      ref={sectionRef}
-      py={20}
-      bgGradient="linear(to-b, purple.900, black)"
-      w="100%"
-    >
+    <Box id="about" ref={sectionRef} py={20} bgGradient="linear(to-b, purple.900, black)" w="100%">
+
       <Container maxW="container.xl">
         <Flex
           direction={{ base: 'column', md: 'row' }}

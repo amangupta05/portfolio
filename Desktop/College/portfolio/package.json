@@ -24,6 +24,7 @@
         "framer-motion": "^11.0.5",
         "gsap": "^3.12.5",
         "next": "^14.0.0",
+        "pixi.js": "^8.6.6",
         "react": "^18.3.0",
         "react-dom": "^18.3.0",
         "react-icons": "^5.0.0",
