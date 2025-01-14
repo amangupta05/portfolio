@@ -9,41 +9,35 @@ const NeuralNetwork: React.FC = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const layers = [8, 12, 12, 8]; // Input, hidden, and output layers
+    const layers = [8, 12, 12, 8];
     const nodeRadius = 6;
     const layerSpacing = canvas.width / (layers.length + 1);
     const nodeSpacing = 80;
 
     const nodes: { x: number; y: number }[][] = [];
 
-    // Generate node positions
     layers.forEach((nodeCount, layerIndex) => {
       const layerNodes: { x: number; y: number }[] = [];
-
       for (let i = 0; i < nodeCount; i++) {
         const x = layerSpacing * (layerIndex + 1);
         const y = canvas.height / 2 + (i - nodeCount / 2) * nodeSpacing;
         layerNodes.push({ x, y });
       }
-
       nodes.push(layerNodes);
     });
 
-    // Animation function
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.lineWidth = 1;
       ctx.strokeStyle = 'rgba(0, 255, 0, 0.3)';
       ctx.fillStyle = '#00ff00';
 
-      // Draw connections
       for (let i = 1; i < nodes.length; i++) {
         for (const prevNode of nodes[i - 1]) {
           for (const currentNode of nodes[i]) {
@@ -55,10 +49,9 @@ const NeuralNetwork: React.FC = () => {
         }
       }
 
-      // Draw nodes
       nodes.flat().forEach((node, index) => {
         ctx.beginPath();
-        const offset = Math.sin(Date.now() * 0.001 + index) * 3; // Animation effect
+        const offset = Math.sin(Date.now() * 0.001 + index) * 3;
         ctx.arc(node.x, node.y + offset, nodeRadius, 0, Math.PI * 2);
         ctx.fill();
       });
@@ -68,14 +61,13 @@ const NeuralNetwork: React.FC = () => {
 
     draw();
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(draw as any);
     };
   }, []);
 
   return (
-    <Box width="100%" height="100vh">
+    <Box id="nn" width="100%" height="100vh">
       <canvas ref={canvasRef} />
     </Box>
   );

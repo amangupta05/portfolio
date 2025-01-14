@@ -12,16 +12,14 @@ const SkillsGlobe: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2 + 40; // Shift down to make space for heading
-    const radius = 200; // Radius of the rotating skill sphere
-    const depthFactor = 1.2; // Adjusts depth effect
+    const centerY = canvas.height / 2 + 40;
+    const radius = 200;
+    const depthFactor = 1.2;
 
-    // ✅ Full skills list
     const skills = [
       'Python', 'TensorFlow', 'PyTorch', 'SQL', 'Azure', 'AWS', 'LangChain',
       'OpenAI', 'Transformers', 'Generative AI', 'React', 'Next.js', 'Data Engineering',
@@ -30,12 +28,7 @@ const SkillsGlobe: React.FC = () => {
 
     const skillObjects = skills.map((skill, index) => {
       const angle = (index / skills.length) * Math.PI * 2;
-      return {
-        text: skill,
-        x: Math.cos(angle) * radius,
-        y: Math.sin(angle) * radius,
-        z: Math.sin(angle * depthFactor) * 100, // Adds depth for 3D effect
-      };
+      return { text: skill, x: Math.cos(angle) * radius, y: Math.sin(angle) * radius, z: Math.sin(angle * depthFactor) * 100 };
     });
 
     let rotationAngle = 0;
@@ -45,17 +38,16 @@ const SkillsGlobe: React.FC = () => {
       ctx.font = 'bold 18px Arial';
 
       skillObjects.forEach((skill, index) => {
-        // Simulated 3D rotation effect
         const x = centerX + Math.cos(rotationAngle + skill.x / radius) * (skill.x + radius);
         const y = centerY + Math.sin(rotationAngle + skill.y / radius) * (skill.y + radius);
-        const scale = (skill.z + 200) / 300; // Adjust size based on depth
+        const scale = (skill.z + 200) / 300;
 
         ctx.fillStyle = `rgba(0, 255, 0, ${scale})`;
         ctx.textAlign = 'center';
         ctx.fillText(skill.text, x, y);
       });
 
-      rotationAngle += 0.008; // ✅ Slower rotation speed
+      rotationAngle += 0.008;
       requestAnimationFrame(draw);
     };
 
@@ -65,12 +57,8 @@ const SkillsGlobe: React.FC = () => {
   }, []);
 
   return (
-    <Box id="skills" width="100%" height="100vh" display="flex" flexDirection="column" alignItems="center">
-
-      {/* ✅ Added Heading at the Top */}
-      <Heading as="h2" size="2xl" mt={10} mb={4} color="brand.neonGreen">
-        Skills
-      </Heading>
+    <Box id="skills" width="100%" height="100vh">
+      <Heading as="h2" size="2xl" mt={10} mb={4} color="brand.neonGreen">Skills</Heading>
       <canvas ref={canvasRef} />
     </Box>
   );

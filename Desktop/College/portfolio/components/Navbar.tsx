@@ -175,12 +175,23 @@ export default function Navbar() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    if (isOpen) onToggle();
+    setTimeout(() => {
+      let element = document.getElementById(id);
+      
+      if (!element) {
+        // ✅ Try finding section with GitHub Pages base path
+        const basePathElement = document.querySelector(`[id="${id}"]`);
+        if (basePathElement) element = basePathElement as HTMLElement;
+      }
+  
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        console.warn(`Section with id="${id}" not found.`);
+      }
+    }, 150); // ✅ Slight delay for better scrolling
   };
+  
 
   return (
     <Box
